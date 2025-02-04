@@ -44,8 +44,8 @@ class _HomepageState extends State<Homepage> {
                 },
               ),
               Positioned(
-                right: 9,
-                top: 3,
+                right: 16,
+                top: 13,
                 child: Container(
                   padding: EdgeInsets.all(4),
                   decoration: BoxDecoration(
@@ -64,7 +64,7 @@ class _HomepageState extends State<Homepage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: Color.fromARGB(91, 61, 44, 1),
+        selectedItemColor: Colors.brown,
         unselectedItemColor: Colors.grey,
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
