@@ -16,7 +16,7 @@ class _HomepageState extends State<Homepage> {
     });
   }
       final List<Map<String, dynamic>> basketItems = [
-    {"name": "Curry", "image": "assets/images/curry.png"},
+    {"name": "1 Curry", "image": "assets/images/curry.png"},
     {"name": "Dal", "image": "assets/images/dal.png"},
     {"name": "Fries", "image": "assets/images/fries.png"},
     {"name": "Pickle", "image": "assets/images/pickle.png"},
@@ -75,15 +75,18 @@ class _HomepageState extends State<Homepage> {
           BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: SingleChildScrollView(
+      body:SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Container(
+            padding: EdgeInsets.fromLTRB(
+          screenwidth*0.05128205128, 
+          screenheight*0.02369668246, 
+          screenwidth*0.05128205128, 
+          0),
             height: screenheight,
             width: screenwidth,
             child: Column(
-             // mainAxisAlignment: MainAxisAlignment.center,
+             crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(height: 20,),
                 Container(
@@ -95,66 +98,110 @@ class _HomepageState extends State<Homepage> {
                     fit: BoxFit.fill)
                   ),
                  ),
-                 SizedBox(height: 20,),
-                 Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      padding: EdgeInsets.all(5),
-                      width: screenwidth*0.2641025641,
-                      height: screenheight*0.03252369668,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        color: Colors.brown,
-                        borderRadius: BorderRadius.circular(20)
+                 SizedBox(height: screenheight*0.02369668246,),
+                 Container(
+                  height: screenheight*0.03266587677,
+                  width: screenwidth*0.89743589743,
+                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.fromLTRB(screenwidth*0.03669230769, screenheight*0.00677725118, screenwidth*0.03669230769, screenheight*0.00677725118),
+                        width: screenwidth*0.2641025641,
+                        height: screenheight*0.03252369668,
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          color: Colors.brown,
+                          borderRadius: BorderRadius.circular(20)
+                        ),
+                        child:  Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Flexible(
+                              child: Image.asset("assets/images/delivery.png",
+                              width: screenwidth*0.04102564102,
+                              height: screenheight*0.01895734597,
+                              fit: BoxFit.fill,),
+                            ),
+                            SizedBox(width: screenwidth*0.01538461538,),
+                            Text('Delivery',style: TextStyle(color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                              //fontSize: screenheight*0.00016587677
+                              ),),
+                          
+                          ],
+                        ),
                       ),
-                      child:  Row(
-                        children: [
-                          Image.asset("assets/images/delivery.png"),
-                          SizedBox(width: 2,),
-                          Text('Delivery',style: TextStyle(color: Colors.white),),
-                        ],
+                      SizedBox(width: screenwidth*0.05128205128,),
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.fromLTRB(screenwidth*0.03669230769, screenheight*0.00677725118, screenwidth*0.03669230769, screenheight*0.00677725118),
+                          width: screenwidth*0.2641025641,
+                          height: screenheight*0.03252369668,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black),
+                            borderRadius: BorderRadius.circular(20)
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Flexible(
+                                child: Image.asset("assets/images/vendor.png",
+                                                            width: screenwidth*0.04102564102,
+                                                            height: screenheight*0.01895734597,
+                                                            fit: BoxFit.fill,),
+                              ),
+                              SizedBox(width:  screenwidth*0.01538461538,),
+                                Text('Vendors',style: TextStyle(color: Colors.black,
+                                                             fontWeight: FontWeight.w600,
+                                                             //fontSize: screenheight*0.00016587677
+                                                             )),
+                               
+                            ],
+                          ),
+                        ),
                       ),
-                    ),
-                    SizedBox(width: 10,),
-                    Container(
-                      padding: EdgeInsets.all(5),
-                      width: screenwidth*0.2641025641,
-                      height: screenheight*0.03252369668,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.black),
-                        borderRadius: BorderRadius.circular(20)
+                      SizedBox(width: screenwidth*0.05128205128,),
+                      Container(
+                        padding: EdgeInsets.fromLTRB(screenwidth*0.03669230769, screenheight*0.00677725118, screenwidth*0.03669230769, screenheight*0.00677725118),
+                        width: screenwidth*0.2641025641,
+                        height: screenheight*0.03252369668,
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.black),
+                          borderRadius: BorderRadius.circular(20)
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Flexible(
+                              child: Image.asset("assets/images/franchise.png",
+                              width: screenwidth*0.04102564102,
+                              height: screenheight*0.01895734597,
+                              fit: BoxFit.fill,),
+                            ),
+                            SizedBox(width: screenwidth*0.01538461538,),
+                            
+                              Text('Franchise',style: TextStyle(color: Colors.black,
+                              fontWeight: FontWeight.w600,
+                              //fontSize: screenheight*0.00016587677
+                              )),
+                           
+                          ],
+                        ),
                       ),
-                      child: Row(
-                        children: [
-                          Image.asset("assets/images/vendor.png"),
-                          SizedBox(width: 2,),
-                           Text('Vendors',style: TextStyle(color: Colors.black)),
-                        ],
-                      ),
-                    ),
-                    SizedBox(width: 10,),
-                    Container(
-                      padding: EdgeInsets.all(5),
-                      width: screenwidth*0.2641025641,
-                      height: screenheight*0.03252369668,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.black),
-                        borderRadius: BorderRadius.circular(20)
-                      ),
-                      child: Row(
-                        children: [
-                          Image.asset("assets/images/franchise.png"),
-                          SizedBox(width: 2,),
-                          const Text('Franchise',style: TextStyle(color: Colors.black)),
-                        ],
-                      ),
-                    ),
-                  ],
+                    ],
+                   ),
                  ),
-                 SizedBox(height: 20,),
+                  SizedBox(height: screenheight*0.02369668246),
+                  Container(
+                    height: screenheight*0.02606635071,
+                    width: screenwidth*0.89743589743,
+                    child: Text("Basket Contains",style: TextStyle(fontSize: screenheight*0.02158767772,fontWeight: FontWeight.w700
+                    ),),
+                  ),
+                   SizedBox(height: screenheight*0.02369668246),
                     GridView.builder(
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
@@ -167,19 +214,19 @@ class _HomepageState extends State<Homepage> {
                      return Column(
                 children: [
           CircleAvatar(
-            
+            backgroundColor: Colors.white,
             radius: 30,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(30), // Make image circular
               child: Image.asset(
                 basketItems[index]["image"], 
                 fit: BoxFit.cover, // Ensure it covers the avatar
-                width: 50, // Adjust size as needed
-                height: 50,
+                width: screenwidth*0.13333333333, // Adjust size as needed
+                height: screenheight*0.0616113744,
               ),
             ),
           ),
-          SizedBox(height: 5),
+          SizedBox(height: screenheight*0.01295023696),
           Text(
             basketItems[index]["name"],
             style: TextStyle(fontSize: 14, color: Colors.black),
@@ -189,12 +236,11 @@ class _HomepageState extends State<Homepage> {
               );
                   },
                 ),
-                 SizedBox(height: 10),
-
+                 SizedBox(height: screenheight*0.02369668246),
               // Membership Banner
               Expanded(
                 child: Container(
-                  padding: EdgeInsets.all(16),
+                  padding: EdgeInsets.fromLTRB(screenwidth*0.07471794871, screenheight*0.03452606635, screenwidth*0.07471794871, 0),
                   decoration: BoxDecoration(
                     color: Colors.green,
                     borderRadius: BorderRadius.circular(15),
@@ -210,23 +256,26 @@ class _HomepageState extends State<Homepage> {
                           color: Colors.white,
                         ),
                       ),
-                      SizedBox(height: 10),
+                      SizedBox(height: screenheight*(21.85/844)),
                        Text(
                         "Perks List",
                         style:TextStyle(
                           fontSize: 18,
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w800,
                           color: Colors.white,
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(height: screenheight*(10/844),),
                       Row(
                         children: [
-                          Icon(Icons.local_shipping, color: Colors.white),
+                          Image.asset("assets/images/image 11.png",
+                          width: screenwidth*0.05128205128,
+                          height: screenheight*0.02369668246,
+                          fit: BoxFit.fill,),
                           SizedBox(width: 8),
                           Text(
                             "Free Delivery on all orders",
-                            style: TextStyle(fontSize: 14, color: Colors.white),
+                            style: TextStyle(fontSize: 14, color: Colors.white,fontWeight: FontWeight.w600),
                           ),
                         ],
                       ),
@@ -238,7 +287,7 @@ class _HomepageState extends State<Homepage> {
             ),
           ),
         ),
-      ),
+      
     );
   }
 }
